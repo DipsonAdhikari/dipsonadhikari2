@@ -10,15 +10,18 @@
     height: 100vh;
     background: #eff4fd;
     position: relative;
+    
 }
 
 nav{
     display: flex;
     width: 84%;
+    height: 50px;
     margin: auto;
     padding: 20px 0;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .logo{
@@ -48,6 +51,7 @@ nav ul li a:hover{
 }
 
 .detel h1{
+    margin-top: 320px;
     font-size: 50px;
     color: #212121;
     margin-bottom: 20px;
@@ -96,12 +100,12 @@ span{
 }
 
 .images:hover .dipson{
-    left: 45%;
+    left: -60%;
 }
 
 .social{
     margin-left: 8%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .social a{
@@ -112,4 +116,17 @@ span{
 
 .social a:hover{
     color: orange;
+}
+img.dipson{
+    
+    height: 240px;
+    bottom: 320px;
+    left: 590px;
+
+}
+img.shape{
+    height: 800px;
+}
+p{
+    font-weight: bolder;
 }
