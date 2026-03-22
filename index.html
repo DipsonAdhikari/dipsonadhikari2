@@ -3,114 +3,457 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Dipson Adhikari's portfolio showcasing work in computer engineering, programming, web development, and AI/ML."
+  >
   <title>Dipson Adhikari | Portfolio</title>
 
-  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
+  <script>
+    document.documentElement.classList.add('js-enabled');
+  </script>
 </head>
 <body>
+  <div class="page-shell">
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="#home" aria-label="Dipson Adhikari home">
+          <img src="images/logo.png" alt="Dipson Adhikari logo">
+          <span>Dipson Adhikari</span>
+        </a>
 
-  <!-- NAVIGATION -->
-  <header>
-    <nav>
-      <div class="logo">
-        <img src="images/logo.png" alt="Dipson Adhikari Logo">
-      </div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Hi, I'm <span>Dipson Adhikari</span></h1>
-        <p>Computer Engineer | C | C++ | DSA | Web Development | Python | AI/ML Enthusiast</p>
-        <a href="#portfolio" class="btn">View My Work</a>
-      </div>
-      <div class="hero-img">
-        <img src="images/dipson4.png" alt="Dipson Adhikari">
-      </div>
-    </div>
-    <div class="hero-social">
-      <a href="https://www.youtube.com/@DipsonAdhikari" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.facebook.com/dipson.adhikari.77" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://github.com/DipsonAdhikari" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
+        <div class="nav-panel" id="site-menu">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a href="#contact" class="nav-cta">Let's Connect</a>
+        </div>
+      </nav>
+    </header>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <p>
-        I am Dipson Adhikari, a passionate Computer Engineer with a strong foundation in programming, data structures, algorithms, and web development.
-        I love building real-world projects and exploring Artificial Intelligence & Machine Learning.
-      </p>
-      <div class="skills">
-        <span>C</span>
-        <span>C++</span>
-        <span>Python</span>
-        <span>DSA</span>
-        <span>Web Dev</span>
-        <span>AI/ML</span>
-      </div>
-    </div>
-  </section>
+    <main>
+      <section class="hero-section" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Computer Engineer | Web Developer | AI/ML Learner</p>
+          <h1>Hi, I'm <span>Dipson Adhikari</span></h1>
+          <p class="hero-description">
+            I am Dipson Adhikari, a computer engineer, web developer, AI/ML learner, data science
+            enthusiast, and part-time video editor. I enjoy turning ideas into useful projects
+            across software, creative work, and practical problem solving.
+          </p>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="section">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <h3>Portfolio Website</h3>
-        <p>Modern portfolio website built with HTML, CSS, and deployed via GitHub Pages.</p>
-      </div>
-      <div class="portfolio-card">
-        <h3>DSA Projects</h3>
-        <p>Algorithms and data structures projects in C/C++ for practice and mastery.</p>
-      </div>
-      <div class="portfolio-card">
-        <h3>Python Projects</h3>
-        <p>Mini Python projects including AI/ML experimentation and scripts.</p>
-      </div>
-      <div class="portfolio-card">
-        <h3>Web Projects</h3>
-        <p>Front-end web projects using HTML, CSS, and JavaScript.</p>
-      </div>
-    </div>
-  </section>
+          <div class="hero-proof">
+            <div>
+              <strong>Freelance Ready</strong>
+              <span>Available on Upwork for technical and creative projects.</span>
+            </div>
+            <div>
+              <strong>Tech Stack</strong>
+              <span>React, JavaScript, Python, SQL, Docker, Power BI, and more.</span>
+            </div>
+            <div>
+              <strong>Creative Edge</strong>
+              <span>Part-time AI video editing for stronger digital storytelling.</span>
+            </div>
+          </div>
 
-  <!-- BLOG -->
-  <section id="blog" class="section">
-    <h2>Blog</h2>
-    <p>Coming soon! I will share insights on programming, AI/ML, and web development here.</p>
-  </section>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">See My Work</a>
+            <a
+              href="https://www.upwork.com/freelancers/~0199b065434575be6b"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noreferrer"
+            >Hire Me on Upwork</a>
+          </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Connect with me on social media or GitHub:</p>
-    <div class="contact-links">
-      <a href="https://www.facebook.com/dipson.adhikari.77" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-      <a href="https://www.youtube.com/@DipsonAdhikari" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-      <a href="https://github.com/DipsonAdhikari" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-    </div>
-  </section>
+          <div class="hero-highlights">
+            <div>
+              <strong>Core strength</strong>
+              <span>Programming fundamentals and DSA</span>
+            </div>
+            <div>
+              <strong>Current direction</strong>
+              <span>Web development, AI/ML, data science, and video editing</span>
+            </div>
+          </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Dipson Adhikari. All rights reserved.</p>
-  </footer>
+          <div class="social-links" aria-label="Social links">
+            <a href="https://www.youtube.com/@DipsonAdhikari" target="_blank" rel="noreferrer">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <span>YouTube</span>
+            </a>
+            <a href="https://www.facebook.com/dipson.adhikari.77" target="_blank" rel="noreferrer">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a>
+            <a href="https://github.com/DipsonAdhikari" target="_blank" rel="noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
 
+        <div class="hero-visual reveal reveal-delay">
+          <div class="hero-visual-stack">
+            <div class="portrait-card">
+              <div class="availability-badge">
+                <span class="badge-dot"></span>
+                Open for freelance work
+              </div>
+              <div class="portrait-shell">
+                <div class="portrait-backdrop"></div>
+                <img src="images/dipson4.png" alt="Portrait of Dipson Adhikari">
+              </div>
+            </div>
+            <div class="status-card">
+              <p class="status-label">Professional Focus</p>
+              <p class="status-title">Web development and AI video editing</p>
+              <p class="status-text">
+                Combining technical problem solving with creative execution for digital projects,
+                personal brands, and freelance work.
+              </p>
+              <div class="status-tags">
+                <span>Python</span>
+                <span>Docker</span>
+                <span>Kubernetes</span>
+                <span>Upwork</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-grid reveal" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">About Me</p>
+          <h2>A portfolio that reflects growth, consistency, and hands-on learning.</h2>
+        </div>
+
+        <div class="about-layout">
+          <article class="info-card">
+            <h3>Who I Am</h3>
+            <p>
+              I enjoy building projects that strengthen both theory and execution. My background
+              in programming, data structures, and engineering helps me approach problems in a
+              structured way while still staying creative when designing user-facing experiences.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>How I Work</h3>
+            <p>
+              I value clean fundamentals, continuous improvement, and real practice. Whether it is
+              solving algorithmic problems, experimenting with Python, or building interfaces for
+              the web, I like work that teaches something useful along the way.
+            </p>
+          </article>
+
+          <article class="info-card accent-card">
+            <h3>What I Bring</h3>
+            <ul class="bullet-list">
+              <li>Strong interest in core programming and problem solving</li>
+              <li>Curiosity for AI/ML, data science, and practical experimentation</li>
+              <li>A mix of technical work and part-time AI video editing</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>The tools, stacks, and platforms I keep sharpening.</h2>
+        </div>
+
+        <div class="skills-layout">
+          <article class="skill-panel">
+            <h3>Programming Foundations</h3>
+            <div class="chip-group">
+              <span>C</span>
+              <span>C++</span>
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>DSA</span>
+              <span>Problem Solving</span>
+            </div>
+          </article>
+
+          <article class="skill-panel">
+            <h3>Web and App Development</h3>
+            <div class="chip-group">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Web Development</span>
+              <span>React</span>
+              <span>MERN Stack</span>
+              <span>MEAN Stack</span>
+              <span>PERN Stack</span>
+            </div>
+          </article>
+
+          <article class="skill-panel">
+            <h3>Backend and Data</h3>
+            <div class="chip-group">
+              <span>SQL</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Snowflake</span>
+              <span>Excel</span>
+              <span>Power BI</span>
+            </div>
+          </article>
+
+          <article class="skill-panel">
+            <h3>Systems and Tooling</h3>
+            <div class="chip-group">
+              <span>Docker</span>
+              <span>Kubernetes</span>
+              <span>Project Building</span>
+              <span>Responsive UI</span>
+              <span>GitHub Pages</span>
+              <span>Deployment Learning</span>
+            </div>
+          </article>
+
+          <article class="skill-panel">
+            <h3>AI, Creative, and Video Tools</h3>
+            <div class="chip-group">
+              <span>AI/ML</span>
+              <span>Data Science</span>
+              <span>AI Video Editing</span>
+              <span>CapCut</span>
+              <span>Premiere Pro</span>
+              <span>DaVinci Resolve</span>
+              <span>Midjourney</span>
+              <span>ElevenLabs</span>
+              <span>Veo 3</span>
+              <span>Sora</span>
+              <span>Practical Experiments</span>
+              <span>Continuous Learning</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="portfolio">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects and practice areas that represent what I am building.</h2>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <div class="card-top">
+              <span class="card-tag">Personal Brand</span>
+              <h3>Portfolio Website</h3>
+            </div>
+            <p>
+              A personal portfolio built to present my background, interests, and technical
+              direction with a stronger visual identity and responsive experience.
+            </p>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-top">
+              <span class="card-tag">Problem Solving</span>
+              <h3>DSA Practice Projects</h3>
+            </div>
+            <p>
+              Practice-driven projects in C and C++ focused on data structures, algorithms, logic
+              building, and strengthening core computer science fundamentals.
+            </p>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-top">
+              <span class="card-tag">Python</span>
+              <h3>Python Experiments</h3>
+            </div>
+            <p>
+              Small projects and scripts that help me explore automation, logic implementation,
+              data-focused workflows, and early-stage AI/ML ideas in a practical way.
+            </p>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="card-top">
+              <span class="card-tag">Creative Work</span>
+              <h3>AI Video Editing</h3>
+            </div>
+            <p>
+              Part-time video editing work with AI-assisted creative workflows for clients who need
+              engaging edits, fast delivery, and polished visual storytelling.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>Ways I can contribute to practical, client-focused work.</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Web Development</h3>
+            <p>
+              Front-end and web-focused work for portfolio sites, personal branding pages, and
+              responsive interfaces that feel clean and modern.
+            </p>
+            <ul class="bullet-list">
+              <li>Responsive layouts and UI polish</li>
+              <li>Portfolio and landing page builds</li>
+              <li>Clean structure for future growth</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Data and Dashboard Work</h3>
+            <p>
+              Data-oriented support for learning projects and reporting workflows using SQL,
+              MySQL, Excel, Power BI, and Snowflake-focused exploration.
+            </p>
+            <ul class="bullet-list">
+              <li>SQL and database-oriented practice</li>
+              <li>Dashboard and reporting support</li>
+              <li>Data-focused learning workflows</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>AI Video Editing</h3>
+            <p>
+              Creative editing support for content creators, online brands, and projects that need
+              sharper pacing, better presentation, and AI-assisted editing workflows.
+            </p>
+            <ul class="bullet-list">
+              <li>Short-form and creator-focused edits</li>
+              <li>Faster turnaround with AI-assisted workflow</li>
+              <li>Clean, engaging visual delivery</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Technical Learning Projects</h3>
+            <p>
+              Ongoing work across AI/ML, data science, Python experiments, and systems topics like
+              Docker, Kubernetes, React ecosystems, and modern development stacks to build
+              stronger long-term technical depth.
+            </p>
+            <ul class="bullet-list">
+              <li>Python-based experiments and scripts</li>
+              <li>Problem solving and DSA practice</li>
+              <li>Container, stack, and deployment-oriented learning</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">Work Style</p>
+          <h2>How I approach technical and creative work professionally.</h2>
+        </div>
+
+        <div class="journey-grid">
+          <article class="journey-card">
+            <h3>Clear Communication</h3>
+            <p>
+              I care about keeping work understandable, progress visible, and deliverables aligned
+              with the actual goal of the project.
+            </p>
+          </article>
+
+          <article class="journey-card">
+            <h3>Steady Improvement</h3>
+            <p>
+              I like building iteratively, refining details, and learning from each project so the
+              final result is stronger than the first draft.
+            </p>
+          </article>
+
+          <article class="journey-card">
+            <h3>Balanced Skill Set</h3>
+            <p>
+              My mix of engineering, web work, and video editing helps me think about both
+              function and presentation at the same time.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section reveal" id="contact">
+        <div class="contact-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Contact</p>
+            <h2>Let's connect and build something meaningful.</h2>
+          </div>
+
+          <p class="contact-copy">
+            If you want to collaborate, hire me for Upwork work, or talk about programming, web
+            development, AI/ML, data science, or video editing, you can reach me through the
+            platforms below.
+          </p>
+
+          <div class="contact-links">
+            <a href="https://www.upwork.com/freelancers/~0199b065434575be6b" target="_blank" rel="noreferrer">
+              <i class="fas fa-briefcase" aria-hidden="true"></i>
+              <span>Upwork</span>
+            </a>
+            <a href="https://github.com/DipsonAdhikari" target="_blank" rel="noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.youtube.com/@DipsonAdhikari" target="_blank" rel="noreferrer">
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <span>YouTube</span>
+            </a>
+            <a href="https://www.facebook.com/dipson.adhikari.77" target="_blank" rel="noreferrer">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year">2026</span> Dipson Adhikari. Crafted with focus and steady learning.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
