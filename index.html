@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Dipson Adhikari's portfolio showcasing work in computer engineering, programming, web development, and AI/ML."
+    content="Dipson Adhikari portfolio: computer engineering, JavaScript, Python, data, AI automation, academic coursework, and video editing."
   >
-  <title>Dipson Adhikari | Portfolio</title>
+  <title>Dipson Adhikari | Computer Engineering Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
@@ -32,8 +32,12 @@
     <header class="site-header">
       <nav class="navbar">
         <a class="brand" href="#home" aria-label="Dipson Adhikari home">
-          <img src="images/logo.png" alt="Dipson Adhikari logo">
-          <span>Dipson Adhikari</span>
+          <span class="brand-mark">
+            <img src="images/logo.png" alt="Dipson Adhikari logo">
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">Dipson Adhikari</span>
+          </span>
         </a>
 
         <button
@@ -50,13 +54,41 @@
 
         <div class="nav-panel" id="site-menu">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#profile">
+                <i class="fas fa-user" aria-hidden="true"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#toolkit">
+                <i class="fas fa-layer-group" aria-hidden="true"></i>
+                <span>Toolkit</span>
+              </a>
+            </li>
+            <li>
+              <a href="#education">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                <span>Education</span>
+              </a>
+            </li>
+            <li>
+              <a href="#work">
+                <i class="fas fa-folder-open" aria-hidden="true"></i>
+                <span>Work</span>
+              </a>
+            </li>
+            <li>
+              <a href="tech/phones/">
+                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                <span>Gadgets</span>
+              </a>
+            </li>
           </ul>
-          <a href="#contact" class="nav-cta">Let's Connect</a>
+          <a class="nav-cta" href="#contact">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a>
         </div>
       </nav>
     </header>
@@ -64,373 +96,347 @@
     <main>
       <section class="hero-section" id="home">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Computer Engineer | Web Developer | AI/ML Learner</p>
+          <p class="eyebrow">Code / Data / AI Automation / Video Editing</p>
           <h1>Hi, I'm <span>Dipson Adhikari</span></h1>
           <p class="hero-description">
-            I am Dipson Adhikari, a computer engineer, web developer, AI/ML learner, data science
-            enthusiast, and part-time video editor. I enjoy turning ideas into useful projects
-            across software, creative work, and practical problem solving.
+            I come from a computer engineering background and I am shaping my work around two
+            practical directions: building software systems with JavaScript/Python, and producing
+            polished AI-assisted video content.
           </p>
 
-          <div class="hero-proof">
-            <div>
-              <strong>Freelance Ready</strong>
-              <span>Available on Upwork for technical and creative projects.</span>
-            </div>
-            <div>
-              <strong>Tech Stack</strong>
-              <span>React, JavaScript, Python, SQL, Docker, Power BI, and more.</span>
-            </div>
-            <div>
-              <strong>Creative Edge</strong>
-              <span>Part-time AI video editing for stronger digital storytelling.</span>
-            </div>
-          </div>
-
           <div class="hero-actions">
-            <a href="#portfolio" class="btn btn-primary">See My Work</a>
+            <a class="btn btn-primary" href="#work">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              View Work
+            </a>
             <a
-              href="https://www.upwork.com/freelancers/~0199b065434575be6b"
               class="btn btn-secondary"
+              href="https://www.upwork.com/freelancers/~0199b065434575be6b"
               target="_blank"
               rel="noreferrer"
-            >Hire Me on Upwork</a>
+              data-tooltip="Available for short-form edits, AI-assisted video workflows, pacing, captions, and polished creator content."
+            >
+              <i class="fas fa-cut" aria-hidden="true"></i>
+              Hire Me
+            </a>
           </div>
 
-          <div class="hero-highlights">
-            <div>
-              <strong>Core strength</strong>
-              <span>Programming fundamentals and DSA</span>
-            </div>
-            <div>
-              <strong>Current direction</strong>
-              <span>Web development, AI/ML, data science, and video editing</span>
-            </div>
-          </div>
-
-          <div class="social-links" aria-label="Social links">
-            <a href="https://www.youtube.com/@DipsonAdhikari" target="_blank" rel="noreferrer">
-              <i class="fab fa-youtube" aria-hidden="true"></i>
-              <span>YouTube</span>
-            </a>
-            <a href="https://www.facebook.com/dipson.adhikari.77" target="_blank" rel="noreferrer">
-              <i class="fab fa-facebook" aria-hidden="true"></i>
-              <span>Facebook</span>
-            </a>
-            <a href="https://github.com/DipsonAdhikari" target="_blank" rel="noreferrer">
-              <i class="fab fa-github" aria-hidden="true"></i>
-              <span>GitHub</span>
-            </a>
+          <div class="hero-value-strip" aria-label="Quick strengths">
+            <span>JavaScript / Python</span>
+            <span>Data + BI</span>
+            <span>AI Automation</span>
+            <span>Video Editing</span>
           </div>
         </div>
 
-        <div class="hero-visual reveal reveal-delay">
-          <div class="hero-visual-stack">
-            <div class="portrait-card">
-              <div class="availability-badge">
-                <span class="badge-dot"></span>
-                Open for freelance work
-              </div>
-              <div class="portrait-shell">
-                <div class="portrait-backdrop"></div>
-                <img src="images/dipson4.png" alt="Portrait of Dipson Adhikari">
-              </div>
-            </div>
-            <div class="status-card">
-              <p class="status-label">Professional Focus</p>
-              <p class="status-title">Web development and AI video editing</p>
-              <p class="status-text">
-                Combining technical problem solving with creative execution for digital projects,
-                personal brands, and freelance work.
-              </p>
-              <div class="status-tags">
-                <span>Python</span>
-                <span>Docker</span>
-                <span>Kubernetes</span>
-                <span>Upwork</span>
-              </div>
-            </div>
+        <aside class="identity-card reveal reveal-delay" aria-label="Portfolio identity card">
+          <div class="portrait-window">
+            <img src="images/dipson4.png" alt="Portrait of Dipson Adhikari">
           </div>
-        </div>
+          <div class="identity-content">
+            <p class="eyebrow">Current Build Path</p>
+            <h2>Engineering depth with modern AI workflows.</h2>
+            <p>
+              JS/Python development, data systems, automation, BI, and creative video editing.
+            </p>
+          </div>
+        </aside>
       </section>
 
-      <section class="section intro-grid reveal" id="about">
+      <section class="section profile-section reveal" id="profile">
         <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>A portfolio that reflects growth, consistency, and hands-on learning.</h2>
+          <p class="eyebrow">Profile</p>
+          <h2>Where my engineering background meets practical digital work.</h2>
         </div>
 
-        <div class="about-layout">
-          <article class="info-card">
-            <h3>Who I Am</h3>
+        <div class="profile-layout">
+          <article class="profile-panel main-panel">
+            <h3>Developer Direction</h3>
             <p>
-              I enjoy building projects that strengthen both theory and execution. My background
-              in programming, data structures, and engineering helps me approach problems in a
-              structured way while still staying creative when designing user-facing experiences.
+              I am strongest when I can connect fundamentals with practical building: interfaces,
+              APIs, scripts, database-backed projects, dashboards, automation workflows, and clean
+              project structure. JavaScript and Python are the two most important tracks in my
+              current learning and project direction.
             </p>
           </article>
 
-          <article class="info-card">
-            <h3>How I Work</h3>
+          <article class="profile-panel">
+            <h3>Creative Direction</h3>
             <p>
-              I value clean fundamentals, continuous improvement, and real practice. Whether it is
-              solving algorithmic problems, experimenting with Python, or building interfaces for
-              the web, I like work that teaches something useful along the way.
+              I also work with video editing and AI video generation. That means creator-focused
+              edits, pacing, voice and visual tools, AI-generated scenes, and content that feels
+              polished rather than randomly generated.
             </p>
           </article>
 
-          <article class="info-card accent-card">
-            <h3>What I Bring</h3>
-            <ul class="bullet-list">
-              <li>Strong interest in core programming and problem solving</li>
-              <li>Curiosity for AI/ML, data science, and practical experimentation</li>
-              <li>A mix of technical work and part-time AI video editing</li>
-            </ul>
+          <article class="profile-panel">
+            <h3>Engineering Base</h3>
+            <p>
+              My bachelor's coursework adds hardware, low-level programming, electronics, digital
+              logic, microprocessors, operating systems, networks, simulation, AI, and data systems
+              underneath the modern tools.
+            </p>
           </article>
         </div>
       </section>
 
-      <section class="section reveal" id="skills">
-        <div class="section-heading">
-          <p class="eyebrow">Skills</p>
-          <h2>The tools, stacks, and platforms I keep sharpening.</h2>
+      <section class="section toolkit-section reveal" id="toolkit">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Tools I Work With</p>
+            <h2>Grouped by the kind of work each skill supports.</h2>
+          </div>
+          <p>
+            JavaScript and Python are the main development tracks, supported by computer
+            engineering coursework, data systems, automation tools, and creative production tools.
+          </p>
         </div>
 
-        <div class="skills-layout">
-          <article class="skill-panel">
-            <h3>Programming Foundations</h3>
+        <div class="toolkit-grid">
+          <article class="toolkit-card featured-toolkit">
+            <span class="toolkit-label">Primary</span>
+            <h3>JavaScript Development</h3>
+            <p>Frontend and backend web foundations for modern interfaces and APIs.</p>
+            <div class="chip-group">
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>REST APIs</span>
+              <span>MERN</span>
+              <span>MEAN</span>
+              <span>PERN</span>
+            </div>
+          </article>
+
+          <article class="toolkit-card featured-toolkit">
+            <span class="toolkit-label">Primary</span>
+            <h3>Python Development</h3>
+            <p>Backend practice, automation, computer vision, GUI work, and ML experiments.</p>
+            <div class="chip-group">
+              <span>Python</span>
+              <span>Django</span>
+              <span>Flask</span>
+              <span>OpenCV</span>
+              <span>Tkinter</span>
+              <span>Automation</span>
+              <span>Machine Learning</span>
+            </div>
+          </article>
+
+          <article class="toolkit-card">
+            <span class="toolkit-label">Engineering</span>
+            <h3>Computer Engineering Core</h3>
             <div class="chip-group">
               <span>C</span>
               <span>C++</span>
-              <span>Python</span>
-              <span>JavaScript</span>
+              <span>Fortran</span>
               <span>DSA</span>
-              <span>Problem Solving</span>
+              <span>OOP</span>
+              <span>VHDL/HDL</span>
+              <span>8085/8086</span>
+              <span>MATLAB</span>
             </div>
           </article>
 
-          <article class="skill-panel">
-            <h3>Web and App Development</h3>
-            <div class="chip-group">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Web Development</span>
-              <span>React</span>
-              <span>MERN Stack</span>
-              <span>MEAN Stack</span>
-              <span>PERN Stack</span>
-            </div>
-          </article>
-
-          <article class="skill-panel">
-            <h3>Backend and Data</h3>
+          <article class="toolkit-card">
+            <span class="toolkit-label">Data</span>
+            <h3>Data, BI, and Big Data</h3>
             <div class="chip-group">
               <span>SQL</span>
               <span>MySQL</span>
+              <span>Microsoft SSMS</span>
+              <span>Supabase</span>
               <span>MongoDB</span>
-              <span>Snowflake</span>
-              <span>Excel</span>
               <span>Power BI</span>
+              <span>Snowflake</span>
+              <span>Hadoop</span>
+              <span>Apache Spark</span>
             </div>
           </article>
 
-          <article class="skill-panel">
-            <h3>Systems and Tooling</h3>
+          <article class="toolkit-card">
+            <span class="toolkit-label">Automation</span>
+            <h3>AI and Workflow Tools</h3>
             <div class="chip-group">
-              <span>Docker</span>
-              <span>Kubernetes</span>
-              <span>Project Building</span>
-              <span>Responsive UI</span>
-              <span>GitHub Pages</span>
-              <span>Deployment Learning</span>
+              <span>n8n</span>
+              <span>Claude Code</span>
+              <span>AI Agents</span>
+              <span>Prompting</span>
+              <span>Data Mining</span>
+              <span>WEKA/MATLAB</span>
             </div>
           </article>
 
-          <article class="skill-panel">
-            <h3>AI, Creative, and Video Tools</h3>
+          <article class="toolkit-card">
+            <span class="toolkit-label">Production</span>
+            <h3>Creative Video and Mobile</h3>
             <div class="chip-group">
-              <span>AI/ML</span>
-              <span>Data Science</span>
-              <span>AI Video Editing</span>
-              <span>CapCut</span>
-              <span>Premiere Pro</span>
+              <span>Video Editing</span>
               <span>DaVinci Resolve</span>
-              <span>Midjourney</span>
-              <span>ElevenLabs</span>
-              <span>Veo 3</span>
+              <span>Premiere Pro</span>
+              <span>CapCut</span>
               <span>Sora</span>
-              <span>Practical Experiments</span>
-              <span>Continuous Learning</span>
+              <span>Veo</span>
+              <span>Flutter</span>
+              <span>React Native</span>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section reveal" id="portfolio">
+      <section class="section education-section reveal" id="education">
         <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Projects and practice areas that represent what I am building.</h2>
+          <p class="eyebrow">Education</p>
+          <h2>Academic path and engineering coursework.</h2>
         </div>
 
-        <div class="portfolio-grid">
-          <article class="portfolio-card">
-            <div class="card-top">
-              <span class="card-tag">Personal Brand</span>
-              <h3>Portfolio Website</h3>
-            </div>
-            <p>
-              A personal portfolio built to present my background, interests, and technical
-              direction with a stronger visual identity and responsive experience.
-            </p>
+        <div class="education-grid">
+          <article class="education-card">
+            <span>Secondary Education</span>
+            <h3>Manakamana Secondary School</h3>
+            <p>Grade: <strong>A+</strong></p>
           </article>
 
-          <article class="portfolio-card">
-            <div class="card-top">
-              <span class="card-tag">Problem Solving</span>
-              <h3>DSA Practice Projects</h3>
-            </div>
-            <p>
-              Practice-driven projects in C and C++ focused on data structures, algorithms, logic
-              building, and strengthening core computer science fundamentals.
-            </p>
+          <article class="education-card">
+            <span>High School</span>
+            <h3>Kathmandu Model College</h3>
+            <p>Grade: <strong>A</strong></p>
+            <p>Science with Computer Science Major</p>
           </article>
 
-          <article class="portfolio-card">
-            <div class="card-top">
-              <span class="card-tag">Python</span>
-              <h3>Python Experiments</h3>
-            </div>
-            <p>
-              Small projects and scripts that help me explore automation, logic implementation,
-              data-focused workflows, and early-stage AI/ML ideas in a practical way.
-            </p>
+          <article class="education-card">
+            <span>Bachelors</span>
+            <h3>Kathmandu Engineering College</h3>
+            <p>Grade: <strong>A</strong></p>
+            <p>Bachelors in Computer Engineering</p>
           </article>
+        </div>
 
-          <article class="portfolio-card">
-            <div class="card-top">
-              <span class="card-tag">Creative Work</span>
-              <h3>AI Video Editing</h3>
-            </div>
+        <div class="coursework-showcase">
+          <div class="coursework-intro">
+            <p class="eyebrow">IOE BCT Coursework</p>
+            <h3>What the bachelor's degree added beyond modern web tools.</h3>
             <p>
-              Part-time video editing work with AI-assisted creative workflows for clients who need
-              engaging edits, fast delivery, and polished visual storytelling.
+              The coursework covered software, electronics, low-level systems, networks, AI,
+              databases, simulation, data mining, and big-data technologies.
             </p>
-          </article>
+          </div>
+
+          <div class="coursework-list">
+            <details open>
+              <summary>Programming and software foundations</summary>
+              <p>
+                C and Fortran in Computer Programming, Object Oriented Programming, Data Structure
+                and Algorithm, Software Engineering, OOAD, Operating System, DBMS, Information
+                System, Internet and Intranet.
+              </p>
+            </details>
+
+            <details>
+              <summary>Hardware, architecture, and low-level labs</summary>
+              <p>
+                Digital Logic with HDL/VHDL-style implementation, Electronics Devices and Circuit,
+                Computer Organization and Architecture, Embedded System, 8085/8086 microprocessor
+                programming using emulator-based practical work.
+              </p>
+            </details>
+
+            <details>
+              <summary>Networks, signals, simulation, and systems</summary>
+              <p>
+                Data Communication, Computer Networks and Security, Distributed System, Digital
+                Signal Analysis and Processing, Simulation and Modeling with GPSS, MATLAB, Python,
+                queueing systems, random numbers, Markov chains, and output analysis.
+              </p>
+            </details>
+
+            <details>
+              <summary>Chosen data electives</summary>
+              <p>
+                Data Mining and Warehousing, Big Data Technologies, and Data Warehousing and
+                Business Intelligence, including classification, clustering, association analysis,
+                OLAP, Hadoop, MapReduce, HBase, Elasticsearch, and practical data-analysis tools.
+              </p>
+            </details>
+          </div>
         </div>
       </section>
 
-      <section class="section reveal" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">Services</p>
-          <h2>Ways I can contribute to practical, client-focused work.</h2>
+      <section class="section work-section reveal" id="work">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Work</p>
+            <h2>Proof areas I can keep improving.</h2>
+          </div>
+          <p>
+            These are not just labels. Each area maps to a practical output: a website, a data
+            workflow, an academic lab, an automation idea, or a video deliverable.
+          </p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Web Development</h3>
+        <div class="work-board">
+          <article class="work-card work-feature">
+            <span>Featured Build</span>
+            <h3>Gadgets & Tech Smartphone Catalog</h3>
             <p>
-              Front-end and web-focused work for portfolio sites, personal branding pages, and
-              responsive interfaces that feel clean and modern.
+              A separate smartphone specs site with JSON data, phone images, brand filters, search,
+              modern UI, and structured hardware information.
             </p>
-            <ul class="bullet-list">
-              <li>Responsive layouts and UI polish</li>
-              <li>Portfolio and landing page builds</li>
-              <li>Clean structure for future growth</li>
-            </ul>
+            <div class="project-stack">
+              <span>JavaScript</span>
+              <span>JSON</span>
+              <span>Search</span>
+              <span>UI Design</span>
+            </div>
+            <a href="tech/phones/" class="inline-card-link">Open Gadgets & Tech</a>
           </article>
 
-          <article class="service-card">
-            <h3>Data and Dashboard Work</h3>
-            <p>
-              Data-oriented support for learning projects and reporting workflows using SQL,
-              MySQL, Excel, Power BI, and Snowflake-focused exploration.
-            </p>
-            <ul class="bullet-list">
-              <li>SQL and database-oriented practice</li>
-              <li>Dashboard and reporting support</li>
-              <li>Data-focused learning workflows</li>
-            </ul>
+          <article class="work-card">
+            <span>Portfolio</span>
+            <h3>Personal Website System</h3>
+            <p>Homepage, identity, sections, responsive layout, and content architecture.</p>
           </article>
 
-          <article class="service-card">
-            <h3>AI Video Editing</h3>
-            <p>
-              Creative editing support for content creators, online brands, and projects that need
-              sharper pacing, better presentation, and AI-assisted editing workflows.
-            </p>
-            <ul class="bullet-list">
-              <li>Short-form and creator-focused edits</li>
-              <li>Faster turnaround with AI-assisted workflow</li>
-              <li>Clean, engaging visual delivery</li>
-            </ul>
+          <article class="work-card">
+            <span>Academic Labs</span>
+            <h3>Engineering Practical Work</h3>
+            <p>C/Fortran, VHDL/HDL, 8085/8086 emulator, MATLAB, GPSS, and simulation labs.</p>
           </article>
 
-          <article class="service-card">
-            <h3>Technical Learning Projects</h3>
-            <p>
-              Ongoing work across AI/ML, data science, Python experiments, and systems topics like
-              Docker, Kubernetes, React ecosystems, and modern development stacks to build
-              stronger long-term technical depth.
-            </p>
-            <ul class="bullet-list">
-              <li>Python-based experiments and scripts</li>
-              <li>Problem solving and DSA practice</li>
-              <li>Container, stack, and deployment-oriented learning</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reveal" id="workflow">
-        <div class="section-heading">
-          <p class="eyebrow">Work Style</p>
-          <h2>How I approach technical and creative work professionally.</h2>
-        </div>
-
-        <div class="journey-grid">
-          <article class="journey-card">
-            <h3>Clear Communication</h3>
-            <p>
-              I care about keeping work understandable, progress visible, and deliverables aligned
-              with the actual goal of the project.
-            </p>
+          <article class="work-card">
+            <span>Automation</span>
+            <h3>Python and AI Workflow Lab</h3>
+            <p>Python scripts, n8n ideas, AI-assisted coding, data workflows, and small tools.</p>
           </article>
 
-          <article class="journey-card">
-            <h3>Steady Improvement</h3>
-            <p>
-              I like building iteratively, refining details, and learning from each project so the
-              final result is stronger than the first draft.
-            </p>
-          </article>
-
-          <article class="journey-card">
-            <h3>Balanced Skill Set</h3>
-            <p>
-              My mix of engineering, web work, and video editing helps me think about both
-              function and presentation at the same time.
-            </p>
+          <article class="work-card">
+            <span>Creative</span>
+            <h3>Video Editing and AI Video</h3>
+            <p>Short-form editing, pacing, AI visuals, voice workflows, and creator content.</p>
           </article>
         </div>
       </section>
 
       <section class="section contact-section reveal" id="contact">
         <div class="contact-panel">
-          <div class="section-heading">
+          <div>
             <p class="eyebrow">Contact</p>
-            <h2>Let's connect and build something meaningful.</h2>
+            <h2>Let's build something focused.</h2>
+            <p class="contact-copy">
+              Reach out for web/UI work, Python and automation ideas, data-dashboard support, or
+              Upwork video editing jobs.
+            </p>
           </div>
-
-          <p class="contact-copy">
-            If you want to collaborate, hire me for Upwork work, or talk about programming, web
-            development, AI/ML, data science, or video editing, you can reach me through the
-            platforms below.
-          </p>
 
           <div class="contact-links">
             <a href="https://www.upwork.com/freelancers/~0199b065434575be6b" target="_blank" rel="noreferrer">
-              <i class="fas fa-briefcase" aria-hidden="true"></i>
-              <span>Upwork</span>
+              <i class="fas fa-cut" aria-hidden="true"></i>
+              <span>Upwork Video Editing</span>
+            </a>
+            <a href="https://www.linkedin.com/in/dipsonadhikari/" target="_blank" rel="noreferrer">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
             </a>
             <a href="https://github.com/DipsonAdhikari" target="_blank" rel="noreferrer">
               <i class="fab fa-github" aria-hidden="true"></i>
@@ -450,7 +456,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year">2026</span> Dipson Adhikari. Crafted with focus and steady learning.</p>
+      <p>&copy; <span id="year">2026</span> Dipson Adhikari. Computer engineering, code, AI tools, and video work.</p>
     </footer>
   </div>
 

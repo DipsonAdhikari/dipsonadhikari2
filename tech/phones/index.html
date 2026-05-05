@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Browse detailed smartphone specifications with images, key hardware summaries, camera notes, battery details, and advanced technical tables."
+  >
+  <title>Smartphone Specs and Features | Gadgets & Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto+Condensed:wght@700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Tech navigation">
+      <a class="brand" href="./" data-route="list">
+        <span>Gadgets & Tech</span>
+      </a>
+      <div class="header-controls" aria-label="Phone filters">
+        <label class="search-box">
+          <span class="sr-only">Search phones</span>
+          <input id="phone-search" type="search" placeholder="Search phone, chipset, camera, 5G, IP68...">
+        </label>
+        <label class="select-box">
+          <span class="sr-only">Brand</span>
+          <select id="brand-filter">
+            <option value="all">All</option>
+          </select>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <main id="app" class="app-shell" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year">2026</span> Dipson Adhikari. Smartphone specs and feature notes.</p>
+  </footer>
+
+  <script src="phone-app.js"></script>
+</body>
+</html>

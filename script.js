@@ -6,20 +6,22 @@ const revealElements = [...document.querySelectorAll('.reveal')];
 const sections = [...document.querySelectorAll('main section[id]')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-toggle.addEventListener('click', () => {
-  const isOpen = navPanel.classList.toggle('is-open');
-  toggle.setAttribute('aria-expanded', String(isOpen));
-});
+if (toggle && navPanel) {
+  toggle.addEventListener('click', () => {
+    const isOpen = navPanel.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+}
 
 document.querySelectorAll('.nav-links a, .nav-cta').forEach((link) => {
   link.addEventListener('click', () => {
-    navPanel.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
+    navPanel?.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
   });
 });
 
 const updateHeaderState = () => {
-  siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);
+  siteHeader?.classList.toggle('is-scrolled', window.scrollY > 12);
 };
 
 const setActiveNavLink = (id) => {
@@ -74,4 +76,8 @@ sections.forEach((section) => sectionObserver.observe(section));
 updateHeaderState();
 window.addEventListener('scroll', updateHeaderState, { passive: true });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearElement = document.getElementById('year');
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
