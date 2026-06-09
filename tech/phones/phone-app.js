@@ -2,6 +2,8 @@ let phoneList = [];
 
 const app = document.getElementById("app");
 const year = document.getElementById("year");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = window.matchMedia("(pointer: fine)").matches;
 
 const labels = {
   phoneName: "Phone name",
@@ -145,6 +147,61 @@ const setMeta = (title, description) => {
   meta.content = description;
 };
 
+if (!reduceMotion && finePointer) {
+  let cursorFrame = null;
+  let cursorX = 0;
+  let cursorY = 0;
+
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      cursorX = event.clientX;
+      cursorY = event.clientY;
+
+      if (cursorFrame) {
+        return;
+      }
+
+      cursorFrame = window.requestAnimationFrame(() => {
+        document.documentElement.style.setProperty("--cursor-x", `${cursorX}px`);
+        document.documentElement.style.setProperty("--cursor-y", `${cursorY}px`);
+        cursorFrame = null;
+      });
+    },
+    { passive: true }
+  );
+}
+
+const enhanceMotion = (root = app) => {
+  if (reduceMotion || !finePointer) {
+    return;
+  }
+
+  root
+    .querySelectorAll(".phone-card, .product-gallery")
+    .forEach((card) => {
+      card.addEventListener("pointermove", (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+        const rotateX = (0.5 - y) * 7;
+        const rotateY = (x - 0.5) * 7;
+
+        card.style.setProperty("--tilt-x", `${rotateY}deg`);
+        card.style.setProperty("--tilt-y", `${rotateX}deg`);
+        card.style.setProperty("--spotlight-x", `${x * 100}%`);
+        card.style.setProperty("--spotlight-y", `${y * 100}%`);
+      });
+
+      card.addEventListener("pointerleave", () => {
+        card.style.removeProperty("--tilt-x");
+        card.style.removeProperty("--tilt-y");
+        card.style.removeProperty("--spotlight-x");
+        card.style.removeProperty("--spotlight-y");
+      });
+    });
+};
+
 const renderLoadError = (message) => {
   app.innerHTML = `
     <section class="load-state">
@@ -188,12 +245,34 @@ const renderList = () => {
   );
 
   const brands = ["All", ...new Set(phoneList.map((phone) => phone.brand))];
+  const badgeCount = new Set(phoneList.flatMap((phone) => phone.badges || [])).size;
   const brandFilter = document.getElementById("brand-filter");
   if (brandFilter) {
     brandFilter.innerHTML = brands.map((brand) => `<option value="${brand.toLowerCase()}">${brand}</option>`).join("");
   }
 
   app.innerHTML = `
+    <section class="catalog-hero">
+      <div>
+        <p class="eyebrow">Gadgets & Tech</p>
+        <h1>Smartphone Specs</h1>
+        <p>Flagship and midrange profiles with hardware highlights, launch notes, cameras, batteries, software, durability, and deep technical tables.</p>
+      </div>
+      <div class="catalog-stats" aria-label="Catalog stats">
+        <article>
+          <strong>${phoneList.length}</strong>
+          <span>Phones</span>
+        </article>
+        <article>
+          <strong>${brands.length - 1}</strong>
+          <span>Brands</span>
+        </article>
+        <article>
+          <strong>${badgeCount}</strong>
+          <span>Tags</span>
+        </article>
+      </div>
+    </section>
     <p class="result-count" id="result-count"></p>
     <section class="phone-grid" id="phone-grid">
       ${phoneList.map(card).join("")}
@@ -201,6 +280,7 @@ const renderList = () => {
   `;
 
   bindListEvents();
+  enhanceMotion(app);
 };
 
 const renderSpecRows = (specs, includeNotSpecified = true) => {
@@ -371,6 +451,8 @@ const renderDetail = (phone) => {
       ${advancedOrder.map((key) => accordion(advancedTitles[key], phone.advancedSpecs[key])).join("")}
     </section>
   `;
+
+  enhanceMotion(app);
 };
 
 const bindListEvents = () => {
@@ -400,6 +482,7 @@ const bindListEvents = () => {
 
   [search, brand].forEach((control) => control.addEventListener("input", applyFilters));
 
+  applyFilters();
 };
 
 const navigateToPhone = (slug) => {
